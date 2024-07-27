@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fish Weight Prediction</title>
+</head>
+<body>
+    <h2>Fish Weight Prediction</h2>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="length1">Length1:</label><br>
+        <input type="text" id="length1" name="length1"><br>
+        <label for="length2">Length2:</label><br>
+        <input type="text" id="length2" name="length2"><br>
+        <label for="length3">Length3:</label><br>
+        <input type="text" id="length3" name="length3"><br>
+        <label for="height">Height:</label><br>
+        <input type="text" id="height" name="height"><br>
+        <label for="width">Width:</label><br>
+        <input type="text" id="width" name="width"><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
