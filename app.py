@@ -18,7 +18,7 @@ model = joblib.load('model.pkl')
 
 @app.route('/')
 def home():
-    return render_template('input.html')
+    return render_template('templates/input.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -26,7 +26,7 @@ def predict():
     final_features = [np.array(features)]
     prediction = model.predict(final_features)
 
-    return render_template('result.html', prediction=prediction[0])
+    return render_template('templates/result.html', prediction=prediction[0])
 
 if __name__ == "__main__":
     app.run(debug=True)
